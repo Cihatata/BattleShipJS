@@ -34,9 +34,9 @@
                 <center><h2 style=>Place Your Ship</h2>
 
                   <ul>
-                    <li ><button id="barbosa" type="button" name="button">Barbosa</button></li>
-                    <li id="yavuz">Yavuz</li>
-                    <li id="midilli">Midilli</li>
+                    <li><button class="ship" id="barbosa" type="button" name="button">Barbosa</button></li>
+                    <li><button class="ship" id="yavuz" type="button" name="button">Yavuz</button></li>
+                    <li><button class="ship" id="midilli" type="button" name="button">Midilli</button></li>
                   </ul>
                   <p id="demo">selam</p>
                 </center>
@@ -162,9 +162,13 @@
            bar++;
            if (bar%2==0) {
                 document.getElementById('barbosa').style.color='red';
+                document.getElementById('yavuz').style.visibility='hidden';
+                document.getElementById("midilli").style.visibility="hidden";
            }
            else {
                 document.getElementById('barbosa').style.color='black';
+                document.getElementById('yavuz').style.visibility='visible';
+                document.getElementById("midilli").style.visibility="visible";
 
            }
 
@@ -173,19 +177,26 @@
           yav++;
           if (yav%2==0) {
                document.getElementById('yavuz').style.color='red';
+               document.getElementById('barbosa').style.visibility='hidden';
+               document.getElementById("midilli").style.visibility="hidden";
           }
           else {
                document.getElementById('yavuz').style.color='black';
-
+               document.getElementById('barbosa').style.visibility='visible';
+               document.getElementById("midilli").style.visibility="visible";
           }
         }
         function midilliPick(){
           mid++;
           if (mid%2==0) {
                document.getElementById('midilli').style.color='red';
+               document.getElementById('barbosa').style.visibility='hidden';
+               document.getElementById("yavuz").style.visibility="hidden";
           }
           else {
                document.getElementById('midilli').style.color='black';
+               document.getElementById('barbosa').style.visibility='visible';
+               document.getElementById("yavuz").style.visibility="visible";
 
           }
         }
