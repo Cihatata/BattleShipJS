@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 onmouseover="myFunction()" id='demo'>Selam</h1>
+
+      <p id='demo2' data-x="omer" data-y="ata"></p>
+      <script type="text/javascript">
+        function myFunction(){
+        var test=document.getElementById('demo2').getAttribute('data-x');
+        document.getElementById('demo').innerHTML=test;
+      }
+      </script>
+
+
+  </body>
+</html>

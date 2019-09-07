@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BattleshipJS</title>
+    <!-- bootstrap -->
+
+    <link rel="stylesheet" href="battle.css">
+    <script src="battle.js">
+
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="cihatata.me">CihatAta</a>
+        </div>
+
+      </div>
+    </nav>
+    <div  align="center" class="top">
+
+      <center><h1 style="">Basic Battleship</h1></center>
+
+    </div>
+    <br>
+    <br>
+
+      <div class="container">
+          <div class="row">
+
+             <div class="stats">
+                <center><h2 style=>Place Your Ship</h2>
+
+                  <ul>
+                    <li ><button id="barbosa" type="button" name="button">Barbosa</button></li>
+                    <li id="yavuz">Yavuz</li>
+                    <li id="midilli">Midilli</li>
+                  </ul>
+                  <p id="demo">selam</p>
+                </center>
+
+            </div>
+
+
+
+            <div onmouseover="showCoords(event)" class="game-field">
+              <div onmouseout="unclickField(0)" onmouseover="clickField(0)" data-x="0" data-y="0" class="shot-field "></div>
+              <div onmouseout="unclickField(1)" onmouseover="clickField(1)" data-x="0" data-y="1" class="shot-field "></div>
+              <div onmouseout="unclickField(2)" onmouseover="clickField(2)" data-x="0" data-y="2" class="shot-field "></div>
+              <div onmouseover="clickField(3)" onmouseout="unclickField(3)" data-x="0" data-y="3" class="shot-field "></div>
+              <div onmouseover="clickField(4)"onmouseout="unclickField(4)" data-x="0" data-y="4" class="shot-field "></div>
+              <div onmouseover="clickField(5)"onmouseout="unclickField(5)" data-x="0" data-y="5" class="shot-field "></div>
+              <div onmouseover="clickField(6)"onmouseout="unclickField(6)" data-x="1" data-y="0" class="shot-field "></div>
+              <div onmouseover="clickField(7)"onmouseout="unclickField(7)" data-x="1" data-y="1" class="shot-field "></div>
+              <div onmouseover="clickField(8)"onmouseout="unclickField(8)" data-x="1" data-y="2" class="shot-field"></div>
+              <div onmouseover="clickField(9)" onmouseout="unclickField(9)" data-x="1" data-y="3" class="shot-field "></div>
+              <div onmouseover="clickField(10)"onmouseout="unclickField(10)" data-x="1" data-y="4" class="shot-field"></div>
+              <div onmouseover="clickField(11)"onmouseout="unclickField(11)" data-x="1" data-y="5" class="shot-field "></div>
+              <div onmouseover="clickField(12)"onmouseout="unclickField(12)" data-x="2" data-y="0" class="shot-field"></div>
+              <div onmouseover="clickField(13)"onmouseout="unclickField(13)" data-x="2" data-y="1" class="shot-field"></div>
+              <div onmouseover="clickField(14)"onmouseout="unclickField(14)" data-x="2" data-y="2" class="shot-field "></div>
+              <div onmouseover="clickField(15)"onmouseout="unclickField(15)" data-x="2" data-y="3" class="shot-field "></div>
+              <div onmouseover="clickField(16)"onmouseout="unclickField(16)" data-x="2" data-y="4" class="shot-field "></div>
+              <div onmouseover="clickField(17)"onmouseout="unclickField(17)" data-x="2" data-y="5" class="shot-field "></div>
+              <div onmouseover="clickField(18)"onmouseout="unclickField(18)" data-x="3" data-y="0" class="shot-field "></div>
+              <div onmouseover="clickField(19)"onmouseout="unclickField(19)" data-x="3" data-y="1" class="shot-field "></div>
+              <div onmouseover="clickField(20)"onmouseout="unclickField(20)" data-x="3" data-y="2" class="shot-field "></div>
+              <div onmouseover="clickField(21)"onmouseout="unclickField(21)" data-x="3" data-y="3" class="shot-field "></div>
+              <div onmouseover="clickField(22)"onmouseout="unclickField(22)" data-x="3" data-y="4" class="shot-field "></div>
+              <div onmouseover="clickField(23)"onmouseout="unclickField(23)" data-x="3" data-y="5" class="shot-field "></div>
+              <div onmouseover="clickField(24)"onmouseout="unclickField(24)" data-x="4" data-y="0" class="shot-field "></div>
+              <div onmouseover="clickField(25)"onmouseout="unclickField(25)" data-x="4" data-y="1" class="shot-field "></div>
+              <div onmouseover="clickField(26)"onmouseout="unclickField(26)" data-x="4" data-y="2" class="shot-field "></div>
+              <div onmouseover="clickField(27)"onmouseout="unclickField(27)" data-x="4" data-y="3" class="shot-field "></div>
+              <div onmouseover="clickField(28)"onmouseout="unclickField(28)" data-x="4" data-y="4" class="shot-field "></div>
+              <div onmouseover="clickField(29)"onmouseout="unclickField(29)" data-x="4" data-y="5" class="shot-field "></div>
+              <div onmouseover="clickField(30)"onmouseout="unclickField(30)" data-x="5" data-y="0" class="shot-field "></div>
+              <div onmouseover="clickField(31)"onmouseout="unclickField(31)" data-x="5" data-y="1" class="shot-field "></div>
+              <div onmouseover="clickField(32)"onmouseout="unclickField(32)" data-x="5" data-y="2" class="shot-field "></div>
+              <div onmouseover="clickField(33)"onmouseout="unclickField(33)" data-x="5" data-y="3" class="shot-field "></div>
+              <div onmouseover="clickField(34)"onmouseout="unclickField(34)" data-x="5" data-y="4" class="shot-field "></div>
+              <div onmouseover="clickField(36)"onmouseout="unclickField(35)" data-x="5" data-y="5" class="shot-field "></div>
+            </div>
+
+
+
+            <div class="game-field">
+              <div  data-x="0" data-y="0" class="shot-field "></div>
+              <div  data-x="0" data-y="1" class="shot-field "></div>
+              <div  data-x="0" data-y="2" class="shot-field "></div>
+              <div  data-x="0" data-y="3" class="shot-field "></div>
+              <div  data-x="0" data-y="4" class="shot-field "></div>
+              <div  data-x="0" data-y="5" class="shot-field "></div>
+              <div  data-x="1" data-y="0" class="shot-field "></div>
+              <div  data-x="1" data-y="1" class="shot-field "></div>
+              <div  data-x="1" data-y="2" class="shot-field"></div>
+              <div  data-x="1" data-y="3" class="shot-field "></div>
+              <div  data-x="1" data-y="4" class="shot-field"></div>
+              <div  data-x="1" data-y="5" class="shot-field "></div>
+              <div  data-x="2" data-y="0" class="shot-field"></div>
+              <div  data-x="2" data-y="1" class="shot-field"></div>
+              <div  data-x="2" data-y="2" class="shot-field "></div>
+              <div  data-x="2" data-y="3" class="shot-field "></div>
+              <div  data-x="2" data-y="4" class="shot-field "></div>
+              <div  data-x="2" data-y="5" class="shot-field "></div>
+              <div  data-x="3" data-y="0" class="shot-field "></div>
+              <div  data-x="3" data-y="1" class="shot-field "></div>
+              <div  data-x="3" data-y="2" class="shot-field "></div>
+              <div  data-x="3" data-y="3" class="shot-field "></div>
+              <div  data-x="3" data-y="4" class="shot-field "></div>
+              <div  data-x="3" data-y="5" class="shot-field "></div>
+              <div  data-x="4" data-y="0" class="shot-field "></div>
+              <div  data-x="4" data-y="1" class="shot-field "></div>
+              <div  data-x="4" data-y="2" class="shot-field "></div>
+              <div  data-x="4" data-y="3" class="shot-field "></div>
+              <div  data-x="4" data-y="4" class="shot-field "></div>
+              <div  data-x="4" data-y="5" class="shot-field "></div>
+              <div  data-x="5" data-y="0" class="shot-field "></div>
+              <div  data-x="5" data-y="1" class="shot-field "></div>
+              <div  data-x="5" data-y="2" class="shot-field "></div>
+              <div  data-x="5" data-y="3" class="shot-field "></div>
+              <div  data-x="5" data-y="4" class="shot-field "></div>
+              <div  data-x="5" data-y="5" class="shot-field "></div>
+            </div>
+
+            <div class="stats">
+              <p>selam</p>
+           </div>
+        </div>
+    </div>
+    <!-- <script type="text/javascript">
+
+      document.getElementById("barbosa").addEventListener("click",placeShip);
+      function placeShip(){
+        document.getElementById("sel").innerHTML="sa";
+
+    }
+    </script> -->
+    <script>
+      function showCoords(event){
+
+          var x = event.clientX;
+          var y = event.clientY;
+          var coords = "X coords: " + x + ", Y coords: " + y;
+          // document.getElementById("demo").innerHTML = coords;
+
+
+
+      }
+    </script>
+    <script type="text/javascript">
+        var bar=1;
+        var yav=1;
+        var mid=1;
+        document.getElementById('barbosa').addEventListener('click',barbosaPick);
+        document.getElementById('yavuz').addEventListener('click',yavuzPick);
+        document.getElementById('midilli').addEventListener('click',midilliPick);
+
+        function barbosaPick(){
+           bar++;
+           if (bar%2==0) {
+                document.getElementById('barbosa').style.color='red';
+           }
+           else {
+                document.getElementById('barbosa').style.color='black';
+
+           }
+
+        }
+        function yavuzPick(){
+          yav++;
+          if (yav%2==0) {
+               document.getElementById('yavuz').style.color='red';
+          }
+          else {
+               document.getElementById('yavuz').style.color='black';
+
+          }
+        }
+        function midilliPick(){
+          mid++;
+          if (mid%2==0) {
+               document.getElementById('midilli').style.color='red';
+          }
+          else {
+               document.getElementById('midilli').style.color='black';
+
+          }
+        }
+
+        function clickField(i){
+          if (i<24 && bar%2==0){
+            console.log(bar);
+            var pickValue=document.getElementsByClassName('shot-field')[i];
+            pickValue.style.backgroundColor='#7FFFD4';
+            var pickValue1=document.getElementsByClassName('shot-field')[i+6];
+            pickValue1.style.backgroundColor='#7FFFD4';
+            var pickValue2=document.getElementsByClassName('shot-field')[i+12];
+            pickValue2.style.backgroundColor='#7FFFD4';
+
+          }
+
+          else if (i<30 && yav%2==0) {
+            var pickValue=document.getElementsByClassName('shot-field')[i];
+            pickValue.style.backgroundColor='#7FFFD4';
+            var pickValue1=document.getElementsByClassName('shot-field')[i+6];
+            pickValue1.style.backgroundColor='#7FFFD4';
+
+          }
+          else if(i!=6 && i!=0 && i!=12 && i!=18 && i!=24 && i!=30 && mid%2==0 ){
+          var pickValue=document.getElementsByClassName('shot-field')[i];
+          pickValue.style.backgroundColor='#7FFFD4';
+          var pickValue1=document.getElementsByClassName('shot-field')[i-1];
+          pickValue1.style.backgroundColor='#7FFFD4';
+
+        }
+      }
+        function unclickField(i){
+          if (i<24 && bar%2==0) {
+
+          var pickValue=document.getElementsByClassName('shot-field')[i];
+          pickValue.style.backgroundColor='#00FF7F';
+          var pickValue1=document.getElementsByClassName('shot-field')[i+6];
+          pickValue1.style.backgroundColor='#00FF7F';
+          var pickValue2=document.getElementsByClassName('shot-field')[i+12];
+          pickValue2.style.backgroundColor='#00FF7F';
+        }
+        else if(i<30 && yav%2==0) {
+          var pickValue=document.getElementsByClassName('shot-field')[i];
+          pickValue.style.backgroundColor='#00FF7F';
+          var pickValue1=document.getElementsByClassName('shot-field')[i+6];
+          pickValue1.style.backgroundColor='#00FF7F';
+
+        }
+        else if (i!=6 && i!=0 && i!=12 && i!=18 && i!=24 && i!=30 && mid%2==0 ) {
+          var pickValue=document.getElementsByClassName('shot-field')[i];
+          pickValue.style.backgroundColor='#00FF7F';
+          var pickValue1=document.getElementsByClassName('shot-field')[i-1];
+          pickValue1.style.backgroundColor='#00FF7F';
+
+
+        }
+        }
+
+    </script>
+    <!-- <script type="text/javascript">
+    const article=document.querySelector('#field');
+    var xloca=article.dataset.x;
+    document.getElementById('demo').innerHTML=xloca;
+
+    </script> -->
+    <!-- <script>
+       var pickValue = document.getElementsByClassName('shot-field');
+
+        var i;
+
+       for (i = 0; i < pickValue.length; i++) {
+         pickValue[i].addEventListener("mouseover",pick);
+         pickValue[i].addEventListener("mouseout",unpick);
+
+
+         function pick(){
+              document.getElementsByClassName('shot-field')[0].style.backgroundColor="red";
+
+          }
+          function unpick(){
+            document.getElementsByClassName('shot-field')[0].style.backgroundColor="#00FF7F";
+
+
+          }
+       }
+    </script> -->
+  </body>
+</html>
