@@ -9,6 +9,19 @@ document.getElementById('yavuz').addEventListener('click',yavuzPick);
 document.getElementById('midilli').addEventListener('click',midilliPick);
 
 //If you select barbosa,other option will be hidden
+function notSeeButton(x){
+  document.getElementById(x).style.visibility='hidden';
+
+}
+
+function inferiorControl(t){
+
+
+
+
+}
+
+
 function barbosaPick(){
    bar++;
    if (bar%2==0) //barbosa click control
@@ -18,10 +31,22 @@ function barbosaPick(){
         document.getElementById("midilli").style.visibility="hidden";
    }
    else {
-        document.getElementById('barbosa').style.color='black';
-        document.getElementById('yavuz').style.visibility='visible';
-        document.getElementById("midilli").style.visibility="visible";
 
+        document.getElementById('barbosa').style.color='black';
+        if(clickControlYavuz<2){
+        document.getElementById('yavuz').style.visibility='visible';
+        }
+        else {
+          document.getElementById('yavuz').style.visibility='hidden';
+        }
+
+        if (clickControlMidilli<2) {
+        document.getElementById("midilli").style.visibility="visible";
+          }
+          else {
+          document.getElementById("midilli").style.visibility="hidden";
+
+          }
    }
 
 }
@@ -36,8 +61,20 @@ function yavuzPick(){
   }
   else {
        document.getElementById('yavuz').style.color='black';
+       if(clickControl<2){
        document.getElementById('barbosa').style.visibility='visible';
+      }
+      else{
+        document.getElementById('barbosa').style.visibility='hidden';
+
+      }
+      if(clickControlMidilli<2){
        document.getElementById("midilli").style.visibility="visible";
+     }
+     else {
+       document.getElementById("midilli").style.visibility="hidden";
+
+     }
   }
 }
 //If you select midilli,other option will be hidden
@@ -51,8 +88,20 @@ function midilliPick(){
   }
   else {
        document.getElementById('midilli').style.color='black';
+       if(clickControl<2){
        document.getElementById('barbosa').style.visibility='visible';
-       document.getElementById("yavuz").style.visibility="visible";
+      }
+      else {
+        document.getElementById("barbosa").style.visibility="hidden";
+
+      }
+      if(clickControlYavuz<2){
+        document.getElementById("yavuz").style.visibility="visible";
+      }
+      else {
+        document.getElementById("yavuz").style.visibility="hidden";
+
+      }
 
   }
 }
@@ -78,7 +127,7 @@ function clickField(i){
       pickValue1.style.backgroundColor='black';
       var pickValue2=document.getElementsByClassName('shot-field')[i+12];
       pickValue2.style.backgroundColor='black';
-
+      notSeeButton('barbosa');
       barbosaPick();
     }
 
@@ -97,7 +146,7 @@ function clickField(i){
       var pickValue1=document.getElementsByClassName('shot-field')[i+6];
       pickValue1.style.backgroundColor='black';
 
-
+      notSeeButton('yavuz');
       yavuzPick();
 
     }
@@ -116,7 +165,7 @@ function clickField(i){
     var pickValue1=document.getElementsByClassName('shot-field')[i-1];
     pickValue1.style.backgroundColor='black';
 
-
+    notSeeButton('midilli');
     midilliPick();
 
   }
