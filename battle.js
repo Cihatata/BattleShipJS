@@ -14,6 +14,9 @@ var enemy1={x:0,y:0,z:0};
 var enemy2={x:0,y:0};
 var enemy3={x:0,y:0};
 var entire=0;
+var entireYavuz=0;
+var entireMidilli=0;
+var crash=0;
 document.getElementById('barbosa').addEventListener('click',barbosaPick);
 document.getElementById('yavuz').addEventListener('click',yavuzPick);
 document.getElementById('midilli').addEventListener('click',midilliPick);
@@ -228,6 +231,7 @@ function clickField(i){
       pickValue2.style.backgroundColor='#2F4F4F';
       notSeeButton('barbosa');
       barbosaPick();
+
     }
   }
   }
@@ -357,8 +361,73 @@ function attack(i){
           document.getElementsByClassName('shot-field')[enemy1.x+36].style.backgroundColor="white";
           document.getElementsByClassName('shot-field')[enemy1.y+36].style.backgroundColor="white";
           document.getElementsByClassName('shot-field')[enemy1.z+36].style.backgroundColor="white";
-          document.getElementsByClassName('shot-field')[enemy1.x+36].removeEventListener('click',attack());
+          document.getElementsByClassName('shot-field')[enemy1.x+36].removeEventListener('click',attack);
       }
     }
+    else {
+      document.getElementsByClassName('shot-field')[i+36].innerHTML='X';
+
     }
+    }
+    for(g in enemy2){
+      if (enemy2[g]==i) {
+        document.getElementsByClassName('shot-field')[i+36].style.backgroundImage="url('fire3.png')";
+        entireYavuz++;
+        if(entireYavuz>1){
+            document.getElementsByClassName('shot-field')[enemy2.x+36].style.backgroundColor='white';
+            document.getElementsByClassName('shot-field')[enemy2.y+36].style.backgroundColor='white';
+
+        }
+      }
+      else{
+        document.getElementsByClassName('shot-field')[i+36].innerHTML='X';
+
+      }
+    }
+    for(h in enemy3){
+      if (enemy3[h]==i) {
+        document.getElementsByClassName('shot-field')[i+36].style.backgroundImage="url('fire3.png')";
+        entireMidilli++;
+        if(entireMidilli>1){
+            document.getElementsByClassName('shot-field')[enemy3.x+36].style.backgroundColor='white';
+            document.getElementsByClassName('shot-field')[enemy3.y+36].style.backgroundColor='white';
+
+        }
+      }
+      else{
+        document.getElementsByClassName('shot-field')[i+36].innerHTML='X';
+
+      }
+    }
+
+    pcAttack();
+
+}
+function pcAttack(){
+    var pcShot = Math.floor(Math.random() * 36);
+    for(r in corBarbosa){
+      if(corBarbosa[r]==pcShot){
+        document.getElementsByClassName('shot-field')[pcShot].style.backgroundImage="url('fire3.png')";
+        return pcShot;
+      }
+      document.getElementsByClassName('shot-field')[pcShot].innerHTML='X';
+
+    }
+    for(t in corYavuz){
+      if(corYavuz[t]==pcShot){
+        document.getElementsByClassName('shot-field')[pcShot].style.backgroundImage="url('fire3.png')";
+        return pcShot;
+      }
+      document.getElementsByClassName('shot-field')[pcShot].innerHTML='X';
+
+    }
+    for(y in corMidilli){
+      if(corMidilli[y]==pcShot){
+        document.getElementsByClassName('shot-field')[pcShot].style.backgroundImage="url('fire3.png')";
+        return pcShot;
+      }
+      document.getElementsByClassName('shot-field')[pcShot].innerHTML='X';
+
+    }
+
 }
