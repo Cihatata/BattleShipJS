@@ -4,7 +4,15 @@ var mid=1;
 var clickControl=1;
 var clickControlYavuz=1;
 var clickControlMidilli=1;
-
+var halay=1;
+var ciftetelli=1;
+var zeybek=1;
+var corBarbosa={x:0,y:0,z:0};
+var corYavuz={x:0,y:0};
+var corMidilli={x:0,y:0};
+var enemy1={x:0,y:0,z:0};
+var enemy2={x:0,y:0};
+var enemy3={x:0,y:0};
 document.getElementById('barbosa').addEventListener('click',barbosaPick);
 document.getElementById('yavuz').addEventListener('click',yavuzPick);
 document.getElementById('midilli').addEventListener('click',midilliPick);
@@ -189,8 +197,10 @@ function midilliPick(){
 }
 //onmouseover
 function clickField(i){
-  if (i<24 && bar%2==0 && clickControl!=2){
-    console.log(bar);
+
+  console.log('hal'+halay);
+  if (i<24 && bar%2==0 && clickControl!=2 && halay==1){
+    console.log('hal'+halay);
     //i put inferior
     //indicate mouseover
     var l=i;
@@ -204,7 +214,11 @@ function clickField(i){
     document.getElementsByClassName("shot-field")[i].onclick=function() {fix(i)};
     function fix(i){
       //select field and place Ship
+      halay++;
+      console.log('hal');
       clickControl++;
+      corBarbosa={x:i,y:i+6,z:i+12};
+      console.log(corBarbosa);
       var pickValue=document.getElementsByClassName('shot-field')[i];
       pickValue.style.backgroundColor='#2F4F4F';
       var pickValue1=document.getElementsByClassName('shot-field')[i+6];
@@ -217,7 +231,8 @@ function clickField(i){
   }
   }
 
-  else if (i<30 && yav%2==0 && clickControlYavuz!=2) {
+  else if (i<30 && yav%2==0 && clickControlYavuz!=2 && ciftetelli==1) {
+
     var l=i;
       if(!inferiorControl('yavuz',l)){
         var pickValue=document.getElementsByClassName('shot-field')[i];
@@ -226,7 +241,9 @@ function clickField(i){
         pickValue1.style.backgroundColor='#7FFFD4';
         document.getElementsByClassName("shot-field")[i].onclick=function() {fix(i)};
         function fix(i){
+          ciftetelli++;
           clickControlYavuz++;
+          corYavuz={x:i,y:i+6};
           var pickValue=document.getElementsByClassName('shot-field')[i];
           pickValue.style.backgroundColor='#2F4F4F';
           var pickValue1=document.getElementsByClassName('shot-field')[i+6];
@@ -239,7 +256,7 @@ function clickField(i){
       }
 
   }
-  else if(i!=6 && i!=0 && i!=12 && i!=18 && i!=24 && i!=30 && mid%2==0 && clickControlMidilli!=2){
+  else if(i!=6 && i!=0 && i!=12 && i!=18 && i!=24 && i!=30 && mid%2==0 && clickControlMidilli!=2 && zeybek==1){
       var l=i;
       if(!inferiorControl('midilli',l)){
             var pickValue=document.getElementsByClassName('shot-field')[i];
@@ -248,7 +265,9 @@ function clickField(i){
             pickValue1.style.backgroundColor='#7FFFD4';
             document.getElementsByClassName("shot-field")[i].onclick=function() {fix(i)};
             function fix(i){
+              zeybek++;
               clickControlMidilli++;
+              corMidilli={x:i,y:i-1};
               var pickValue=document.getElementsByClassName('shot-field')[i];
               pickValue.style.backgroundColor='#2F4F4F';
               var pickValue1=document.getElementsByClassName('shot-field')[i-1];
@@ -306,4 +325,18 @@ else if (i!=6 && i!=0 && i!=12 && i!=18 && i!=24 && i!=30 && mid%2==0 ) {
     }
 
 }
+}
+function enemyShips(){
+    var enemyCoord1 = Math.floor(Math.random() * 24);
+    enemy1={x:enemyCoord1,y:enemyCoord1+6,z:enemyCoord1+12};
+    var enemyCoord2 = Math.floor(Math.random() * 30);
+    enemy2={x:enemyCoord2,y:enemyCoord2+6};
+    var enemyCoord3 = Math.floor(Math.random() * 36);
+
+    if(enemyCoord3%6==0){
+
+      enemy3={x:enemyCoord3+1,y:enemyCoord3};
+    }
+      enemy3={x:enemyCoord3,y:enemyCoord3+1};
+
 }
