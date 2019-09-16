@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="battle.css">
 
   </head>
-  <body>
+  <body onload="enemyShips()">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -36,7 +36,7 @@
                     <li><button class="ship" id="yavuz" type="button" name="button">Yavuz</button></li>
                     <li><button class="ship" id="midilli" type="button" name="button">Midilli</button></li>
                   </ul>
-                  <p id="demo">selam</p>
+                  <div id="demo">selam</div>
                 </center>
 
             </div>
@@ -44,83 +44,83 @@
 
 
             <div onmouseover="showCoords(event)" class="game-field">
-              <div onmouseout="unclickField(0)" onmouseover="clickField(0)" data-x="0" data-y="0" class="shot-field "></div>
-              <div onmouseout="unclickField(1)" onmouseover="clickField(1)" data-x="0" data-y="1" class="shot-field "></div>
-              <div onmouseout="unclickField(2)" onmouseover="clickField(2)" data-x="0" data-y="2" class="shot-field "></div>
-              <div onmouseover="clickField(3)" onmouseout="unclickField(3)" data-x="0" data-y="3" class="shot-field "></div>
-              <div onmouseover="clickField(4)"onmouseout="unclickField(4)" data-x="0" data-y="4" class="shot-field "></div>
-              <div onmouseover="clickField(5)"onmouseout="unclickField(5)" data-x="0" data-y="5" class="shot-field "></div>
-              <div onmouseover="clickField(6)"onmouseout="unclickField(6)" data-x="1" data-y="0" class="shot-field "></div>
-              <div onmouseover="clickField(7)"onmouseout="unclickField(7)" data-x="1" data-y="1" class="shot-field "></div>
-              <div onmouseover="clickField(8)"onmouseout="unclickField(8)" data-x="1" data-y="2" class="shot-field"></div>
-              <div onmouseover="clickField(9)" onmouseout="unclickField(9)" data-x="1" data-y="3" class="shot-field "></div>
-              <div onmouseover="clickField(10)"onmouseout="unclickField(10)" data-x="1" data-y="4" class="shot-field"></div>
-              <div onmouseover="clickField(11)"onmouseout="unclickField(11)" data-x="1" data-y="5" class="shot-field "></div>
-              <div onmouseover="clickField(12)"onmouseout="unclickField(12)" data-x="2" data-y="0" class="shot-field"></div>
-              <div onmouseover="clickField(13)"onmouseout="unclickField(13)" data-x="2" data-y="1" class="shot-field"></div>
-              <div onmouseover="clickField(14)"onmouseout="unclickField(14)" data-x="2" data-y="2" class="shot-field "></div>
-              <div onmouseover="clickField(15)"onmouseout="unclickField(15)" data-x="2" data-y="3" class="shot-field "></div>
-              <div onmouseover="clickField(16)"onmouseout="unclickField(16)" data-x="2" data-y="4" class="shot-field "></div>
-              <div onmouseover="clickField(17)"onmouseout="unclickField(17)" data-x="2" data-y="5" class="shot-field "></div>
-              <div onmouseover="clickField(18)"onmouseout="unclickField(18)" data-x="3" data-y="0" class="shot-field "></div>
-              <div onmouseover="clickField(19)"onmouseout="unclickField(19)" data-x="3" data-y="1" class="shot-field "></div>
-              <div onmouseover="clickField(20)"onmouseout="unclickField(20)" data-x="3" data-y="2" class="shot-field "></div>
-              <div onmouseover="clickField(21)"onmouseout="unclickField(21)" data-x="3" data-y="3" class="shot-field "></div>
-              <div onmouseover="clickField(22)"onmouseout="unclickField(22)" data-x="3" data-y="4" class="shot-field "></div>
-              <div onmouseover="clickField(23)"onmouseout="unclickField(23)" data-x="3" data-y="5" class="shot-field "></div>
-              <div onmouseover="clickField(24)"onmouseout="unclickField(24)" data-x="4" data-y="0" class="shot-field "></div>
-              <div onmouseover="clickField(25)"onmouseout="unclickField(25)" data-x="4" data-y="1" class="shot-field "></div>
-              <div onmouseover="clickField(26)"onmouseout="unclickField(26)" data-x="4" data-y="2" class="shot-field "></div>
-              <div onmouseover="clickField(27)"onmouseout="unclickField(27)" data-x="4" data-y="3" class="shot-field "></div>
-              <div onmouseover="clickField(28)"onmouseout="unclickField(28)" data-x="4" data-y="4" class="shot-field "></div>
-              <div onmouseover="clickField(29)"onmouseout="unclickField(29)" data-x="4" data-y="5" class="shot-field "></div>
-              <div onmouseover="clickField(30)"onmouseout="unclickField(30)" data-x="5" data-y="0" class="shot-field "></div>
-              <div onmouseover="clickField(31)"onmouseout="unclickField(31)" data-x="5" data-y="1" class="shot-field "></div>
-              <div onmouseover="clickField(32)"onmouseout="unclickField(32)" data-x="5" data-y="2" class="shot-field "></div>
-              <div onmouseover="clickField(33)"onmouseout="unclickField(33)" data-x="5" data-y="3" class="shot-field "></div>
-              <div onmouseover="clickField(34)"onmouseout="unclickField(34)" data-x="5" data-y="4" class="shot-field "></div>
-              <div onmouseover="clickField(35)"onmouseout="unclickField(35)" data-x="5" data-y="5" class="shot-field "></div>
+              <div onmouseout="unclickField(0)" onmouseover="clickField(0)"   class="shot-field "></div>
+              <div onmouseout="unclickField(1)" onmouseover="clickField(1)"   class="shot-field "></div>
+              <div onmouseout="unclickField(2)" onmouseover="clickField(2)"   class="shot-field "></div>
+              <div onmouseover="clickField(3)" onmouseout="unclickField(3)"   class="shot-field "></div>
+              <div onmouseover="clickField(4)"onmouseout="unclickField(4)"   class="shot-field "></div>
+              <div onmouseover="clickField(5)"onmouseout="unclickField(5)"   class="shot-field "></div>
+              <div onmouseover="clickField(6)"onmouseout="unclickField(6)"   class="shot-field "></div>
+              <div onmouseover="clickField(7)"onmouseout="unclickField(7)"   class="shot-field "></div>
+              <div onmouseover="clickField(8)"onmouseout="unclickField(8)"   class="shot-field"></div>
+              <div onmouseover="clickField(9)" onmouseout="unclickField(9)"   class="shot-field "></div>
+              <div onmouseover="clickField(10)"onmouseout="unclickField(10)"   class="shot-field"></div>
+              <div onmouseover="clickField(11)"onmouseout="unclickField(11)"   class="shot-field "></div>
+              <div onmouseover="clickField(12)"onmouseout="unclickField(12)"   class="shot-field"></div>
+              <div onmouseover="clickField(13)"onmouseout="unclickField(13)"   class="shot-field"></div>
+              <div onmouseover="clickField(14)"onmouseout="unclickField(14)"   class="shot-field "></div>
+              <div onmouseover="clickField(15)"onmouseout="unclickField(15)"   class="shot-field "></div>
+              <div onmouseover="clickField(16)"onmouseout="unclickField(16)"   class="shot-field "></div>
+              <div onmouseover="clickField(17)"onmouseout="unclickField(17)"   class="shot-field "></div>
+              <div onmouseover="clickField(18)"onmouseout="unclickField(18)"   class="shot-field "></div>
+              <div onmouseover="clickField(19)"onmouseout="unclickField(19)"   class="shot-field "></div>
+              <div onmouseover="clickField(20)"onmouseout="unclickField(20)"   class="shot-field "></div>
+              <div onmouseover="clickField(21)"onmouseout="unclickField(21)"   class="shot-field "></div>
+              <div onmouseover="clickField(22)"onmouseout="unclickField(22)"   class="shot-field "></div>
+              <div onmouseover="clickField(23)"onmouseout="unclickField(23)"   class="shot-field "></div>
+              <div onmouseover="clickField(24)"onmouseout="unclickField(24)"   class="shot-field "></div>
+              <div onmouseover="clickField(25)"onmouseout="unclickField(25)"   class="shot-field "></div>
+              <div onmouseover="clickField(26)"onmouseout="unclickField(26)"   class="shot-field "></div>
+              <div onmouseover="clickField(27)"onmouseout="unclickField(27)"   class="shot-field "></div>
+              <div onmouseover="clickField(28)"onmouseout="unclickField(28)"   class="shot-field "></div>
+              <div onmouseover="clickField(29)"onmouseout="unclickField(29)"   class="shot-field "></div>
+              <div onmouseover="clickField(30)"onmouseout="unclickField(30)"   class="shot-field "></div>
+              <div onmouseover="clickField(31)"onmouseout="unclickField(31)"   class="shot-field "></div>
+              <div onmouseover="clickField(32)"onmouseout="unclickField(32)"   class="shot-field "></div>
+              <div onmouseover="clickField(33)"onmouseout="unclickField(33)"   class="shot-field "></div>
+              <div onmouseover="clickField(34)"onmouseout="unclickField(34)"   class="shot-field "></div>
+              <div onmouseover="clickField(35)"onmouseout="unclickField(35)"   class="shot-field "></div>
             </div>
 
 
 
             <div class="game-field">
-              <div  data-x="0" data-y="0" class="shot-field "></div>
-              <div  data-x="0" data-y="1" class="shot-field "></div>
-              <div  data-x="0" data-y="2" class="shot-field "></div>
-              <div  data-x="0" data-y="3" class="shot-field "></div>
-              <div  data-x="0" data-y="4" class="shot-field "></div>
-              <div  data-x="0" data-y="5" class="shot-field "></div>
-              <div  data-x="1" data-y="0" class="shot-field "></div>
-              <div  data-x="1" data-y="1" class="shot-field "></div>
-              <div  data-x="1" data-y="2" class="shot-field"></div>
-              <div  data-x="1" data-y="3" class="shot-field "></div>
-              <div  data-x="1" data-y="4" class="shot-field"></div>
-              <div  data-x="1" data-y="5" class="shot-field "></div>
-              <div  data-x="2" data-y="0" class="shot-field"></div>
-              <div  data-x="2" data-y="1" class="shot-field"></div>
-              <div  data-x="2" data-y="2" class="shot-field "></div>
-              <div  data-x="2" data-y="3" class="shot-field "></div>
-              <div  data-x="2" data-y="4" class="shot-field "></div>
-              <div  data-x="2" data-y="5" class="shot-field "></div>
-              <div  data-x="3" data-y="0" class="shot-field "></div>
-              <div  data-x="3" data-y="1" class="shot-field "></div>
-              <div  data-x="3" data-y="2" class="shot-field "></div>
-              <div  data-x="3" data-y="3" class="shot-field "></div>
-              <div  data-x="3" data-y="4" class="shot-field "></div>
-              <div  data-x="3" data-y="5" class="shot-field "></div>
-              <div  data-x="4" data-y="0" class="shot-field "></div>
-              <div  data-x="4" data-y="1" class="shot-field "></div>
-              <div  data-x="4" data-y="2" class="shot-field "></div>
-              <div  data-x="4" data-y="3" class="shot-field "></div>
-              <div  data-x="4" data-y="4" class="shot-field "></div>
-              <div  data-x="4" data-y="5" class="shot-field "></div>
-              <div  data-x="5" data-y="0" class="shot-field "></div>
-              <div  data-x="5" data-y="1" class="shot-field "></div>
-              <div  data-x="5" data-y="2" class="shot-field "></div>
-              <div  data-x="5" data-y="3" class="shot-field "></div>
-              <div  data-x="5" data-y="4" class="shot-field "></div>
-              <div  data-x="5" data-y="5" class="shot-field "></div>
+              <div onclick="attack(0)"   class="shot-field "></div>
+              <div onclick="attack(1)"   class="shot-field "></div>
+              <div onclick="attack(2)"   class="shot-field "></div>
+              <div onclick="attack(3)"   class="shot-field "></div>
+              <div onclick="attack(4)"   class="shot-field "></div>
+              <div onclick="attack(5)"   class="shot-field "></div>
+              <div onclick="attack(6)"   class="shot-field "></div>
+              <div onclick="attack(7)"   class="shot-field "></div>
+              <div onclick="attack(8)"   class="shot-field"></div>
+              <div onclick="attack(9)"   class="shot-field "></div>
+              <div onclick="attack(10)"  class="shot-field"></div>
+              <div onclick="attack(11)"   class="shot-field "></div>
+              <div onclick="attack(12)"   class="shot-field"></div>
+              <div onclick="attack(13)"   class="shot-field"></div>
+              <div onclick="attack(14)"   class="shot-field "></div>
+              <div onclick="attack(15)"    class="shot-field "></div>
+              <div onclick="attack(16)"   class="shot-field "></div>
+              <div onclick="attack(17)"   class="shot-field "></div>
+              <div onclick="attack(18)"   class="shot-field "></div>
+              <div onclick="attack(19)"   class="shot-field "></div>
+              <div onclick="attack(20)"   class="shot-field "></div>
+              <div onclick="attack(21)"   class="shot-field "></div>
+              <div onclick="attack(22)"   class="shot-field "></div>
+              <div onclick="attack(23)"   class="shot-field "></div>
+              <div onclick="attack(24)"   class="shot-field "></div>
+              <div onclick="attack(25)"   class="shot-field "></div>
+              <div onclick="attack(26)"   class="shot-field "></div>
+              <div onclick="attack(27)"   class="shot-field "></div>
+              <div onclick="attack(28)"   class="shot-field "></div>
+              <div onclick="attack(29)"   class="shot-field "></div>
+              <div onclick="attack(30)"   class="shot-field "></div>
+              <div onclick="attack(31)"   class="shot-field "></div>
+              <div onclick="attack(32)"   class="shot-field "></div>
+              <div onclick="attack(33)"   class="shot-field "></div>
+              <div onclick="attack(34)"   class="shot-field "></div>
+              <div onclick="attack(35)"   class="shot-field "></div>
             </div>
 
             <div class="stats">

@@ -13,6 +13,7 @@ var corMidilli={x:0,y:0};
 var enemy1={x:0,y:0,z:0};
 var enemy2={x:0,y:0};
 var enemy3={x:0,y:0};
+var entire=0;
 document.getElementById('barbosa').addEventListener('click',barbosaPick);
 document.getElementById('yavuz').addEventListener('click',yavuzPick);
 document.getElementById('midilli').addEventListener('click',midilliPick);
@@ -329,14 +330,35 @@ else if (i!=6 && i!=0 && i!=12 && i!=18 && i!=24 && i!=30 && mid%2==0 ) {
 function enemyShips(){
     var enemyCoord1 = Math.floor(Math.random() * 24);
     enemy1={x:enemyCoord1,y:enemyCoord1+6,z:enemyCoord1+12};
+    console.log(enemy1);
     var enemyCoord2 = Math.floor(Math.random() * 30);
     enemy2={x:enemyCoord2,y:enemyCoord2+6};
+    console.log(enemy2);
     var enemyCoord3 = Math.floor(Math.random() * 36);
 
     if(enemyCoord3%6==0){
 
       enemy3={x:enemyCoord3+1,y:enemyCoord3};
-    }
+      console.log(enemy3);
+    }else{
       enemy3={x:enemyCoord3,y:enemyCoord3+1};
+      console.log(enemy3);
+    }
+}
+function attack(i){
 
+    for (f in enemy1){
+      if(enemy1[f]==i){
+      //shot
+      console.log('girdi'+i);
+      document.getElementsByClassName('shot-field')[i+36].style.backgroundImage="url('fire3.png')";
+      entire++;
+      if(entire>2){
+          document.getElementsByClassName('shot-field')[enemy1.x+36].style.backgroundColor="white";
+          document.getElementsByClassName('shot-field')[enemy1.y+36].style.backgroundColor="white";
+          document.getElementsByClassName('shot-field')[enemy1.z+36].style.backgroundColor="white";
+          document.getElementsByClassName('shot-field')[enemy1.x+36].removeEventListener('click',attack());
+      }
+    }
+    }
 }
