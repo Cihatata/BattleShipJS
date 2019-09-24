@@ -3,18 +3,16 @@ body{
   background-color:#E0FFFF;
 
 }
-
-
-.container{
+/* .container{
   margin: auto;
   width: 92%;
   height: 500px;
   background-color: #ADD8E6	;
   border: 2px solid #333;
 
-}
+} */
 
-.row{
+/* .row{
 
   margin-top: 60px;
   margin-left: 230px;
@@ -79,5 +77,30 @@ ul > li > a{
   margin-top: 7px;
   float: left;
   display: center;
+
+} */
+
+.mycss-main{
+  background-image: linear-gradient(to right ,plum,violet) !important;
+
+}
+.mycss-logo{
+  display: block;
+  border: solid 1px;
+  border-radius: 100%;
+  padding: 10px 10px;
+
+}
+.myclass-logo > img {
+  max-width: 48px;
+  max-height:  48px;
+}
+.mycss-raised{
+    margin-top: 90px !important;
+    background-image: url("../img/war.jpg") !important;
+    background-position:top !important;
+    background-repeat: no-repeat !important;
+
+    z-index: +1;
 
 }
