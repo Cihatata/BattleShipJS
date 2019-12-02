@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Semantic UI</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="view/css/battle.css">
+    <link rel="stylesheet" href="view/css/semantic.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="view/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="view/js/semantic.js"></script>
+
+</head>
+<body onload="">
+<div class="pusher">
+    <div class=" ui vertical mycss-main center aligned segment">
+        <div class="ui container">
+            <div class=" ui large secondary mycss-main pointed fixed menu">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+
+                </a>
+                <div class="mycss-logo">
+                    <img src="view/img/warship.png" alt="">
+                </div>
+                <div class="center item">
+
+                    <a class="item" href="#">How to Play</a>
+                    <a class="item" href="#">Play Game</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="howToPlay" class="ui container">
+        <div class="ui mycss-raised raised segment">
+            <div class="ui two column very relaxed grid">
+                <div class="column">
+                    <p>asd</p>
+                    <p>asdasd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p >asd</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="column">
+                    <p>
+                        </p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>as</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br><br>
+
+                    <div class="ui inverted segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <div class="ui people shape">
+                                    <div class="sides">
+                                        <div class="active side">
+
+                                            <div class="image">
+                                                <img id="image1" class="mycss-avatarImage" style="" src="view/img/boy2.png"
+                                                     alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="side">
+                                            <div class="image">
+                                                <div class="center">
+                                                    <img id="image2" class="mycss-avatarImage" src="view/img/girll.png"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="side">
+                                            <div class="content">
+                                                <div class="center">
+                                                    <img id="image3" class="mycss-avatarImage" src="view/img/girl1.png"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="side">
+                                            <div class="content">
+                                                <div class="center">
+                                                    <img id="image4" class="mycss-avatarImage" src="view/img/man.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="nextImage" style="margin-left: 20%; margin-top: 5%;"
+                                        class="ui right labeled icon sa center button">
+                                    <i class="right arrow icon"></i>
+                                    Next Image
+                                </button>
+                            </div>
+
+                            <div class="column">
+                                <div style="margin-top: 10%;" class="ui inverted right icon input">
+                                    <input id="namInput" style="margin-left: 7%;" value="omer" type="text"
+                                           placeholder="Name">
+                                    <i class="user circle outline icon"></i>
+                                </div>
+
+
+                                <div>
+                                    <button onclick="start()" id="playGame" style="margin-left: 15%; margin-top: 75%;"
+                                            class="ui bottom aligned huge pink button">
+                                        Play Game
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ui vertical divider">
+                -
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="ui thin modal">
+    <i class="close icon"></i>
+    <div class="header">
+        <div class="description">
+            amiralbatti.com
+        </div>
+    </div>
+    <div class="image content">
+        <div class="image">
+            An image can appear on left or an icon
+        </div>
+
+    </div>
+    <div class="actions">
+        <div class="ui primary button">Random Match</div>
+        <div class="ui secondary button">Create  Game</div>
+        <div class="ui button">Find Game</div>
+    </div>
+</div>
+<script src="view/js/app.js"></script>
+<script src="view/js/app2.js"></script>
+<script>
+
+
+    //console.log(playerName);
+    ///document.getElementById('playGame').addEventListener('click',start);
+
+
+</script>
+
+</body>
+</html>
