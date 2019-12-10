@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html"><head>
+    <meta charset="utf-8">
+    <title>Semantic UI</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:700&amp;display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="view/css/battle.css">
+    <link rel="stylesheet" href="view/css/semantic.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="view/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="view/js/semantic.js"></script>
+
+</head>
+<body onload="" class="dimmable" style="margin-right: 0px;">
+<div class="pusher">
+    <div class=" ui vertical mycss-main center aligned segment">
+        <div class="ui container">
+            <div class=" ui large secondary mycss-main pointed fixed menu">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+
+                </a>
+                <div class="mycss-logo">
+                    <img src="view/img/warship.png" alt="">
+                </div>
+                <div class="center item">
+
+                    <a class="item" href="#">How to Play</a>
+                    <a class="item" href="#">Play Game</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="howToPlay" class="ui container" style="display: none;">
+        <div class="ui mycss-raised raised segment">
+            <div class="ui two column very relaxed grid">
+                <div class="column">
+                    <p>asd</p>
+                    <p>asdasd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="column">
+                    <p>
+                    </p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>as</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <p>asd</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br><br>
+
+                    <div class="ui inverted segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <div class="ui people shape">
+                                    <div class="sides">
+                                        <div class="side">
+
+                                            <div class="image">
+                                                <img id="image1" class="mycss-avatarImage" style="" src="view/img/boy2.png" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="side">
+                                            <div class="image">
+                                                <div class="center">
+                                                    <img id="image2" class="mycss-avatarImage" src="view/img/girll.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="side">
+                                            <div class="content">
+                                                <div class="center">
+                                                    <img id="image3" class="mycss-avatarImage" src="view/img/girl1.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="side active">
+                                            <div class="content">
+                                                <div class="center">
+                                                    <img id="image4" class="mycss-avatarImage" src="view/img/man.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="nextImage" style="margin-left: 20%; margin-top: 5%;" class="ui right labeled icon sa center button">
+                                    <i class="right arrow icon"></i>
+                                    Next Image
+                                </button>
+                            </div>
+
+                            <div class="column">
+                                <div style="margin-top: 10%;" class="ui inverted right icon input">
+                                    <input id="namInput" style="margin-left: 7%;" value="omer" type="text" placeholder="Name">
+                                    <i class="user circle outline icon"></i>
+                                </div>
+
+
+                                <div>
+                                    <button onclick="start()" id="playGame" style="margin-left: 15%; margin-top: 75%;" class="ui bottom aligned huge pink button">
+                                        Play Game
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="ui teal button">Single Player</button>
+                            <button class="ui teal button">Multiplayer</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ui vertical divider">
+                and
+            </div>
+
+        </div>
+
+    </div>
+    <div class="ui inverted segment">
+
+        <div class="ui inverted left icon input"></div>
+    </div>
+    <div id="card" style="display: block;" class="ui two mycss-card container ">
+        <div class="ui two column grid">
+            <div class="column">
+                <div class="ui link cards column">
+                    <div class="mycss-avatar card">
+                        <div class="image">
+                            <img id="myImg" src="view/img/man.png">
+                        </div>
+                        <div class="content">
+                            <div class="header"><p id="molly">asdasd</p></div>
+                            <div class="ui three column grid">
+                                <div class="column">
+                                    <br>
+                                    Hit
+                                    <hr>
+                                    <a>
+                                        <img src="view/img/flame.png" alt="">
+                                        <p id="hit">0</p>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <br>
+                                    <p id="" style="width: 100%;">Remain</p>
+                                    <hr>
+                                    <a>
+                                        <img src="img/warship.png " width="24px" height="24px" alt="">
+                                        <p id="remain">7</p>
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <br>
+                                    Shot
+                                    <hr>
+                                    <a>
+                                        <img src="img/flame.png" alt="">
+                                        12
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui link cards column">
+                    <div class="mycss-avatar card">
+                        <div class="image">
+                            <img id="enemyImage" src="view/img/pirate.png">
+                        </div>
+                        <div class="content">
+                            <div class=" header">Molly</div>
+                            <div class="ui three column grid">
+                                <div class="column">
+                                    <br>
+                                    Hit Target
+                                    <hr>
+                                    <a>
+                                        <img src="img/flame.png" alt="">
+                                        12
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <br>
+                                    Remain
+                                    <hr>
+                                    <a>
+                                        <img src="img/warship.png " width="28px" height="28px" alt="">
+                                        22
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <br>
+                                    Shot
+                                    <hr>
+                                    <a>
+                                        <img src="img/flame.png" alt="">
+                                        12
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="ui two column stackable grid">
+        <div class="two wide column">
+            <div style="margin-top: 50%; margin-left:10% ;" class="ui segment">
+                <center><h2>Place Your Ship</h2></center>
+                <center><div id="nusret" class="ui mycss-shipbutton animated button" tabindex="0">
+                    <div class="visible content">Nusret</div>
+                    <div class="hidden content">
+                        <img src="img/nusret.png" class="right arrow icon">
+                    </div>
+                </div></center>
+                <center> <div id="yavuz" class="ui mycss-shipbutton animated button" tabindex="0">
+                    <div class="visible content">Yavuz</div>
+                    <div class="hidden content">
+                        <img src="img/yavuz.png" class="right arrow icon">
+                    </div>
+                </div></center>
+                <center><div id="mahmudiye" class="ui mycss-shipbutton animated button" tabindex="0">
+                    <div class="visible content">Mahmudiye</div>
+                    <div class="hidden content">
+                        <img src="img/mahmudiye.png" class="right arrow icon">
+                    </div>
+                </div></center>
+            </div>
+        </div>
+        <div class="five wide column">
+            <div class="ui inverted  segment">
+                <div class="square">
+                    <!--                   ilk sira -->
+                    <div onmouseover="mouseOver(0)" onmouseout="mouseDown(0)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(1)" onmouseout="mouseDown(1)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(2)" onmouseout="mouseDown(2)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(3)" onmouseout="mouseDown(3)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(4)" onmouseout="mouseDown(4)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(5)" onmouseout="mouseDown(5)" class="shot-square"></div>
+                    <!--                    2-->
+                    <div onmouseover="mouseOver(6)" onmouseout="mouseDown(6)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(7)" onmouseout="mouseDown(7)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(8)" onmouseout="mouseDown(8)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(9)" onmouseout="mouseDown(9)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(10)" onmouseout="mouseDown(10)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(11)" onmouseout="mouseDown(11)" class="shot-square"></div>
+
+                    <!--                    3-->
+                    <div onmouseover="mouseOver(12)" onmouseout="mouseDown(12)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(13)" onmouseout="mouseDown(13)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(14)" onmouseout="mouseDown(14)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(15)" onmouseout="mouseDown(15)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(16)" onmouseout="mouseDown(16)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(17)" onmouseout="mouseDown(17)" class="shot-square"></div>
+                    <!--                    4-->
+                    <div onmouseover="mouseOver(18)" onmouseout="mouseDown(18)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(19)" onmouseout="mouseDown(19)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(20)" onmouseout="mouseDown(20)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(21)" onmouseout="mouseDown(21)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(22)" onmouseout="mouseDown(22)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(23)" onmouseout="mouseDown(23)" class="shot-square"></div>
+                    <!--                    5-->
+                    <div onmouseover="mouseOver(24)" onmouseout="mouseDown(24)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(25)" onmouseout="mouseDown(25)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(26)" onmouseout="mouseDown(26)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(27)" onmouseout="mouseDown(27)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(28)" onmouseout="mouseDown(28)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(29)" onmouseout="mouseDown(29)" class="shot-square"></div>
+                    <!--                    6-->
+                    <div onmouseover="mouseOver(30)" onmouseout="mouseDown(30)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(31)" onmouseout="mouseDown(31)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(32)" onmouseout="mouseDown(32)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(33)" onmouseout="mouseDown(33)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(34)" onmouseout="mouseDown(34)" class="shot-square"></div>
+                    <div onmouseover="mouseOver(35)" onmouseout="mouseDown(35)" class="shot-square"></div>
+                </div>
+            </div>
+        </div>
+        <div class="two wide column">
+            <center><div style="margin-top: 50%;" class=""><img src="img/videogame.png" alt=""></div></center>
+        </div>
+        <div class="five wide column">
+            <div class="ui segment">
+                <div class="square">
+                    <!--                   ilk sira -->
+                    <div onclick="attack(0)" class="shot-square-2"></div>
+                    <div onclick="attack(1)" class="shot-square-2"></div>
+                    <div onclick="attack(2)" class="shot-square-2"></div>
+                    <div onclick="attack(3)" class="shot-square-2"></div>
+                    <div onclick="attack(4)" class="shot-square-2"></div>
+                    <div onclick="attack(5)" class="shot-square-2"></div>
+                    <!--                    2-->
+                    <div onclick="attack(6)" class="shot-square-2"></div>
+                    <div onclick="attack(7)" class="shot-square-2"></div>
+                    <div onclick="attack(8)" class="shot-square-2"></div>
+                    <div onclick="attack(9)" class="shot-square-2"></div>
+                    <div onclick="attack(10)" class="shot-square-2"></div>
+                    <div onclick="attack(11)" class="shot-square-2"></div>
+                    <!--                    3-->
+                    <div onclick="attack(12)" class="shot-square-2"></div>
+                    <div onclick="attack(13)" class="shot-square-2"></div>
+                    <div onclick="attack(14)" class="shot-square-2"></div>
+                    <div onclick="attack(15)" class="shot-square-2"></div>
+                    <div onclick="attack(16)" class="shot-square-2"></div>
+                    <div onclick="attack(17)" class="shot-square-2"></div>
+                    <!--                    4-->
+                    <div onclick="attack(18)" class="shot-square-2"></div>
+                    <div onclick="attack(19)" class="shot-square-2"></div>
+                    <div onclick="attack(20)" class="shot-square-2"></div>
+                    <div onclick="attack(21)" class="shot-square-2"></div>
+                    <div onclick="attack(22)" class="shot-square-2"></div>
+                    <div onclick="attack(23)" class="shot-square-2"></div>
+                    <!--                    5-->
+                    <div onclick="attack(24)" class="shot-square-2"></div>
+                    <div onclick="attack(25)" class="shot-square-2"></div>
+                    <div onclick="attack(26)" class="shot-square-2"></div>
+                    <div onclick="attack(27)" class="shot-square-2"></div>
+                    <div onclick="attack(28)" class="shot-square-2"></div>
+                    <div onclick="attack(29)" class="shot-square-2"></div>
+                    <!--                    6-->
+                    <div onclick="attack(30)" class="shot-square-2"></div>
+                    <div onclick="attack(31)" class="shot-square-2"></div>
+                    <div onclick="attack(32)" class="shot-square-2"></div>
+                    <div onclick="attack(33)" class="shot-square-2"></div>
+                    <div onclick="attack(34)" class="shot-square-2"></div>
+                    <div onclick="attack(35)" class="shot-square-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two wide column">
+        <div class="ui segment">
+            <p>Deneme</p>
+        </div>
+    </div>
+</div>
+
+<script src="view/js/app2.js"></script>
+<script>
+
+
+    //console.log(playerName);
+    ///document.getElementById('playGame').addEventListener('click',start);
+
+
+</script>
+
+
+
+<div class="ui dimmer modals page transition hidden"><div id="banner" class="ui modal front transition hidden" style="z-index: -2;">
+    <i class="close icon"></i>
+    <div class="header">
+        Game ID
+    </div>
+    <div class="image content">
+        <div class="ui medium image">
+            <img src="img/war.jpg">
+        </div>
+        <div style="width: 100%;" class="description">
+            <div class="ui header"></div>
+            <p> <a href="https://www.gravatar.com" target="_blank"></a> </p>
+
+            <div>Validity Time<span id="time">01:00</span> minutes!</div>
+
+            <div id="test" class="ui fluid icon input">
+                <input id="search" class="mycss-search" type="text" placeholder="Enter Id">
+                <i class="search icon"></i>
+            </div>
+            <p style="font-size: x-large ;font-family: 'Kanit', sans-serif;" class="" id="status"></p>
+        </div>
+    </div>
+    <div class="actions">
+        <div id="searchId" class="ui black right labeled icon button">
+            Search ID
+        </div>
+        <div id="createId" class="ui black right labeled icon button">
+            Create ID
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div></div></body></html>
