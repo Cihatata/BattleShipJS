@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const url = process.env.MONGO_DB_URL;
-mongoose.connect(url, {useUnifiedTopology: true,
+console.log(url)
+mongoose.connect('mongodb://127.0.0.1:27017/amiralbatti', {useUnifiedTopology: true,
     useNewUrlParser: true, useCreateIndex: true });
 
 
@@ -18,17 +19,30 @@ let game = new Schema({
 });
 
 let Game = mongoose.model("games",game);
-module.exports = Game;
+module.exports= Game;
 module.exports.kaydet = function(gamejson){
-
-    gamejson.save((data) => {
-        console.log(data);
+    console.log(gamejson)
+    // Game.create(gamejson,function (err) {
+    //     console.log(err);
+    // })
+    gamejson.save((err) => {
+        console.log(err);
     });
 };
-module.exports.bul = function(){
-    Game.find( { gameId: "Delibirsey" }, (err, kullanicilar) => {
+module.exports.bul = function(gameid){
+    Game.find( { gameId: gameid }, (err, data) => {
         if (err) throw err;
-        console.log(kullanicilar);
+        // if(data[0].match=true){
+        //     return true;
+        // }
+        console.log('bul')
+        console.log(typeof data);
+        if (data){
+            console.log('ife girdi')
+            // return JSON.stringify(data);
+            return "xd";
+
+        }
     });
 
 }
