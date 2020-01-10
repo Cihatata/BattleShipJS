@@ -501,8 +501,9 @@ function startTimer(duration, display) {
 
     }, 1000);
     var handle = setInterval(function () {
-        let socket = io.connect("http://localhost:3333/ismatch");
-        socket.emit('ismatch',idControl);
+        var fiveMinutes = 60 * 5,
+            display = $('#time');
+        startTimer(fiveMinutes, display)
         socket.on("ismatch", (msg) => {
             if(msg=='match')
                 start();
@@ -553,9 +554,7 @@ document.getElementById('createId').addEventListener('click', function () {
 });
 
 //Fomantic UI
-$('.ui.right.sa.button').click(function () {
-    $('.shape').shape('flip right');
-});
+
 var t = 0;
 $('.ui.teal.button').click(function () {
     $('.ui.modal').modal('show');

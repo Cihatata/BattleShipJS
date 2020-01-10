@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <title>Semantic UI</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Kanit:700&display=swap" rel="stylesheet">
+    <link type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Kanit:700&display=swap" >
 
 
 
-    <link rel="stylesheet" href="view/css/battle.css">
-    <link rel="stylesheet" href="view/css/semantic.css">
+    <link rel="stylesheet" type="text/css" href="view/css/battle.css">
+    <link rel="stylesheet" type="text/css"  href="view/css/semantic.css">
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="view/js/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="view/js/semantic.js"></script>
 
+    <script type="application/javascript" src="view/js/jquery-3.4.1.js"></script>
+    <script type="application/javascript" src="view/js/semantic.js"></script>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 </head>
 <body onload="">
 <div class="pusher">
@@ -132,7 +132,7 @@
 
 
                                 <div>
-                                    <button onclick="start()" id="playGame" style="margin-left: 15%; margin-top: 75%;"
+                                    <button onclick="" id="playGame" style="margin-left: 15%; margin-top: 75%;"
                                             class="ui bottom aligned huge pink button">
                                         Play Game
                                     </button>
@@ -160,22 +160,26 @@
         </div>
     </div>
     <div class="image content">
-        <div class="image">
+        <div class="ui fluid icon input">
+            <input id="idInput" type="text" placeholder="Search">
+            <i class="search icon"></i>
+            <button id="findButton" class="ui button">Find</button>
+        </div>
+        <div id="inputOrId" class="image">
             An image can appear on left or an icon
         </div>
+        <div id="time">1:00</div>
 
     </div>
     <div class="actions">
-        <div class="ui primary button">Random Match</div>
-        <div class="ui secondary button">Create  Game</div>
-        <div class="ui button">Find Game</div>
+        <div  id=randomMatch class="ui primary button">Random Match</div>
+        <div id="createGame" class="ui secondary button">Create  Game</div>
+        <div id="findGame" class="ui button">Find Game</div>
     </div>
 </div>
-<script src="view/js/app.js"></script>
-<script src="view/js/app2.js"></script>
-<script>
-
-
+<script type="application/javascript" src="view/js/app.js"></script>
+<!--<script type="application/javascript" src="view/js/app2.js"></script>-->
+<script type="application/javascript">
     //console.log(playerName);
     ///document.getElementById('playGame').addEventListener('click',start);
 
