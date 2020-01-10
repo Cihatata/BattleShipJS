@@ -2,4 +2,8 @@
 Game
 [link to BattleShipJS](http://cihatata.me/battleshipJavascript/battleship.html)
 
-project in progress
+link is old version<br/>
+
+**project in progress**
+
+
